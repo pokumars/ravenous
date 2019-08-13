@@ -30,11 +30,16 @@ class App extends React.Component {
   }
 
   searchYelp(term, location, sortBy){
-    //console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+    if(term=== "" || location=== ""){
+      //
+      window.alert("A searchbox is empty. Please fill in location and business");
+      return;
+    }
+    console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
     //this.setState({businesses: businesses1});
     Yelp.search(term, location, sortBy).then(businesses => {
       //console.log(businesses.count);
-      this.setState({businesses: businesses}); 
+      this.setState({businesses: businesses});
     });
   }
 
