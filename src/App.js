@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import BusinessList from './components/BusinessList/BusinessList';
 import SearchBar from './components/SearchBar/SearchBar';
 import Yelp from './util/Yelp'
+import Footer from './components/Footer/Footer';
 
 
- const business = {
+ /*const business = {
   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
   name: 'MarginOtto Pizzeria',
   address: '1010 Paddington Way',
@@ -17,7 +17,7 @@ import Yelp from './util/Yelp'
   rating: 4.5,
   reviewCount: 90
 }; 
-let businesses1 = [business, business, business, business, business, business] 
+let businesses1 = [business, business, business, business, business, business]*/
  
 class App extends React.Component {
   constructor(props){
@@ -44,6 +44,7 @@ class App extends React.Component {
         <h1>ravenous</h1>
         <SearchBar searchYelp={this.searchYelp} />
         < BusinessList businesses={this.state.businesses} />
+        <Footer />
     </div>
     );
   }

@@ -1,0 +1,10 @@
+.footer {
+  clear: both;
+  position: relative;
+  height: 150px;
+  
+  width:100%;
+  background:rgb(16, 17, 17);
+  color: whitesmoke;
+  padding: 20px 0;
+}
